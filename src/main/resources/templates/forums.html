@@ -228,6 +228,24 @@
         </div>
         <!---->
     </div>
+    <!-- Add Post Button -->
+<div class="add-post">
+    <button id="addPostButton">Add Post</button>
+</div>
+
+<!-- Post Modal -->
+<div class="modal hide" id="postModal">
+    <div class="modal-content">
+        <span class="close-modal" id="closePostModal">&times;</span>
+        <h2>Add New Post</h2>
+        <form id="postForm">
+            <input type="text" id="postTitle" placeholder="Post Title" required />
+            <textarea id="postContent" placeholder="Write your post..." required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
 
     <!-- Forum Info -->
     <div class="forum-info">
@@ -238,6 +256,7 @@
         <span>Latest post: <b><a href="">Random post</a></b> on Dec 15 2021 By <a href="">RandomUser</a></span>.<br>
         <span>Check <a href="">the latest posts</a> .</span><br>
     </div>
+    
 
     <footer>
         <span>&copy;  Atul | All Rights Reserved</span>
