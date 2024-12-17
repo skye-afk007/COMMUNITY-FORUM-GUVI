@@ -329,6 +329,6 @@ mvn test
 
 ## Contact 📧
 
-Project Maintainer - [@skye-afk007](https://github.com/skye-afk007)
+Project Maintainer - [@skye-afk007](https://github.com/skye-afk007), [@atulrai07](https://github.com/atulrai07)
 
 Project Link: [https://github.com/skye-afk007/COMMUNITY-FORUM-GUVI.git](https://github.com/skye-afk007/COMMUNITY-FORUM-GUVI.git)
