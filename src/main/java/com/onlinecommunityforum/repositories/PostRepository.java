@@ -1,7 +1,21 @@
 package com.onlinecommunityforum.repositories;
 
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import com.onlinecommunityforum.entities.Post;
+import com.onlinecommunityforum.model.Post;
 
-public interface PostRepository extends JpaRepository<Post, Integer> {}
+@Repository
+public interface PostRepository extends JpaRepository<com.onlinecommunityforum.model.Post, Long> {
+
+    // Custom query example with error handling
+    default Optional<Post> findPostById(Long id) {
+        try {
+            return findById(id);
+        } catch (Exception ex) {
+            throw new RuntimeException("Database error while fetching post with ID: " + id, ex);
+        }
+    }
+}

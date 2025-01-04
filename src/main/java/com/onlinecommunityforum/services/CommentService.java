@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.onlinecommunityforum.dto.CommentDTO;
-import com.onlinecommunityforum.entities.Comment;
+import com.onlinecommunityforum.model.Comment;
 import com.onlinecommunityforum.repositories.CommentRepository;
 
 @Service
@@ -14,13 +14,17 @@ public class CommentService {
     private CommentRepository commentRepository;
 
     public void saveComment(CommentDTO commentDTO) {
-        // Convert DTO to Entity
+        if (commentDTO == null || commentDTO.getContent() == null || commentDTO.getContent().trim().isEmpty()) {
+            throw new IllegalArgumentException("Comment content cannot be null or empty");
+        }
         Comment comment = new Comment();
         comment.setContent(commentDTO.getContent());
         comment.setPostId(commentDTO.getPostId());
         comment.setUserId(commentDTO.getUserId());
-        
-        // Save the comment to the database
-        commentRepository.save(comment);
+        try {
+            commentRepository.save(comment);
+        } catch (Exception ex) {
+            throw new RuntimeException("Failed to save comment: " + ex.getMessage());
+        }
     }
 }
