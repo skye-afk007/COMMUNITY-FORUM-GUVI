@@ -1,12 +1,12 @@
 package com.onlinecommunityforum.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import jakarta.persistence.Id;
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import java.time.LocalDateTime;@SuppressWarnings("unused")
+import jakarta.persistence.Id;
+@SuppressWarnings("unused")
 public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,3 +25,4 @@ public class Message {
     @Column(name = "sent_at")
     private LocalDateTime sentAt;
 }
+

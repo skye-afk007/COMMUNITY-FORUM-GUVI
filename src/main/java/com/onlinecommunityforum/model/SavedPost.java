@@ -1,12 +1,9 @@
 package com.onlinecommunityforum.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import jakarta.persistence.Id;
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import java.time.LocalDateTime;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Id;
 @SuppressWarnings("unused")
 public class SavedPost {
     @Id
@@ -20,3 +17,5 @@ public class SavedPost {
     @Column(name = "saved_at")
     private LocalDateTime savedAt;
 }
+
+

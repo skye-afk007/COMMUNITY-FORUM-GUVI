@@ -10,7 +10,6 @@ import com.onlinecommunityforum.model.Post;
 @Repository
 public interface PostRepository extends JpaRepository<com.onlinecommunityforum.model.Post, Long> {
 
-    // Custom query example with error handling
     default Optional<Post> findPostById(Long id) {
         try {
             return findById(id);

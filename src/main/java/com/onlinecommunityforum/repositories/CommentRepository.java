@@ -10,7 +10,6 @@ import com.onlinecommunityforum.model.Comment;
 @Repository
 public interface CommentRepository extends JpaRepository<Comment, Long> { 
 
-    // Example custom method with exception handling
     default Optional<Comment> findCommentById(Long id) { 
         try {
             return findById(id);

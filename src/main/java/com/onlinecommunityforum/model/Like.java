@@ -1,12 +1,11 @@
 package com.onlinecommunityforum.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import jakarta.persistence.Id;
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import java.time.LocalDateTime;
+import jakarta.persistence.Id;
 @SuppressWarnings("unused")
 public class Like {
     @Id
@@ -23,3 +22,4 @@ public class Like {
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 }
+
